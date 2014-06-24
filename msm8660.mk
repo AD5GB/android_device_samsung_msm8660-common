@@ -163,7 +163,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/lib/libqc-opt.so \
     debug.mdpcomp.maxlayer=3 \
     debug.hwc.dynThreshold=1.9 \
-    lpa.decode=false
+    lpa.decode=false \
+	persist.hwc.mdpcomp.enable=false \
+	debug.composition.type=gpu \
+	dev.pm.dyn_samplingrate=1 \
+	dev.pm.gpu_samplingrate=1
+
 
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/msm8660-common/overlay
