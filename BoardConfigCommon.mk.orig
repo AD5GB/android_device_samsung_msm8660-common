@@ -74,11 +74,15 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
 TARGET_USES_QCOM_BSP := true
 
 # Recovery
+<<<<<<< HEAD
 ##BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/msm8660-common/recovery/graphics.c
+=======
+BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/msm8660-common/recovery/graphics.c
 TARGET_RECOVERY_FSTAB := device/samsung/msm8660-common/rootdir/etc/fstab.qcom
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8660-common
+>>>>>>> 763d4fb... msm8660-common: Cleanup Samsung device inheritance
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
