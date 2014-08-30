@@ -187,3 +187,15 @@ PRODUCT_COPY_FILES += \
 
 # Common Qualcomm hardware
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
+
+
+# Common properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0 \
+    com.qc.hardware=true \
+    ro.vendor.extension_library=/system/lib/libqc-opt.so \
+    debug.mdpcomp.maxlayer=3 \
+    debug.hwc.dynThreshold=1.9 \
+    lpa.decode=false
+
+
