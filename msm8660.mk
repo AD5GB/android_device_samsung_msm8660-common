@@ -50,6 +50,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwc.dynThreshold=1.9 \
     ro.opengles.version=131072
 
+# Screen flash/flicker
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.hwc.mdpcomp.enable=false \
+	debug.composition.type=gpu \
+	dev.pm.dyn_samplingrate=1 \
+	dev.pm.gpu_samplingrate=1
+	
+
 PRODUCT_PROPERTY_OVERRIDES += \
     lpa.decode=false
 
