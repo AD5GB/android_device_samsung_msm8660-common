@@ -80,6 +80,9 @@ TARGET_RECOVERY_FSTAB := device/samsung/msm8660-common/rootdir/etc/fstab.qcom
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8660-common
 
+# External apps on SD
+TARGET_EXTERNAL_APPS = sdcard1
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/msm8660-common/sepolicy
