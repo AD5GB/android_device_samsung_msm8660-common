@@ -50,14 +50,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwc.dynThreshold=1.9 \
     ro.opengles.version=131072
 
-# Screen flash/flicker
-PRODUCT_PROPERTY_OVERRIDES += \
-	persist.hwc.mdpcomp.enable=false \
-	debug.composition.type=gpu \
-	dev.pm.dyn_samplingrate=1 \
-	dev.pm.gpu_samplingrate=1
-	
-
 PRODUCT_PROPERTY_OVERRIDES += \
     lpa.decode=false
 
@@ -71,10 +63,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_1="" \
     persist.rild.nitz_short_ons_2="" \
     persist.rild.nitz_short_ons_3=""
-
-# RIL Class
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=SamsungQualcommRIL
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -193,3 +181,7 @@ PRODUCT_COPY_FILES += \
 
 # Common Qualcomm hardware
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
+
+# MPDecision
+PRODUCT_COPY_FILES += \
+	device/samsung/msm8660-common/01mpdecision:system/etc/init.d/01mpdecision

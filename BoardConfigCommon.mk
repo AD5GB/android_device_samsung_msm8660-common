@@ -17,6 +17,9 @@
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/msm8660-common/include
 
+# common kernel source
+TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660
+
 # Platform
 TARGET_BOARD_PLATFORM := msm8660
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
@@ -59,6 +62,9 @@ TARGET_QCOM_DISPLAY_VARIANT := caf
 # GPS
 BOARD_HAVE_NEW_QC_GPS := true
 
+# External apps on SD
+TARGET_EXTERNAL_APPS = sdcard1
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
@@ -74,14 +80,11 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
 TARGET_USES_QCOM_BSP := true
 
 # Recovery
-BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/msm8660-common/recovery/graphics.c
+#BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/msm8660-common/recovery/graphics.c
 TARGET_RECOVERY_FSTAB := device/samsung/msm8660-common/rootdir/etc/fstab.qcom
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8660-common
-
-# External apps on SD
-TARGET_EXTERNAL_APPS = sdcard1
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
